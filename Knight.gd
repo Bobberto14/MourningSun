@@ -6,10 +6,10 @@ var velocity = Vector2()
 
 func update_light(dist):
 	var brightness
-	if dist > 200:
+	if dist > 150:
 		brightness = 0
 	else:
-		brightness = (200/dist)-1
+		brightness = (150/dist)-1
 	$Light2D.set_energy(brightness)
 
 func _physics_process(delta):

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spot.png-36b4dfbff4efeea17ec3137d266ffc4a.stex"
+path="res://.import/CeilingWall_Sprite.png-89043eca82c9c44ee5b8db0e042345e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spot.png"
-dest_files=[ "res://.import/spot.png-36b4dfbff4efeea17ec3137d266ffc4a.stex" ]
+source_file="res://Sprites/CeilingWall_Sprite.png"
+dest_files=[ "res://.import/CeilingWall_Sprite.png-89043eca82c9c44ee5b8db0e042345e7.stex" ]
 
 [params]
 

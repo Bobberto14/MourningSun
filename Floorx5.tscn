@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/FloorWall_Sprite.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 8 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( 0, 0, 40, 0, 40, 8, 0, 8 )
+
+[node name="Floorx5" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 4, 4 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 12, 4 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 20, 4 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 28, 4 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 36, 4 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 20, 4 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 2 )

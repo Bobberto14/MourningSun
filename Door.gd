@@ -8,10 +8,13 @@ extends StaticBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Open.hide()
 
 func open():
 	$CollisionShape2D.disabled = true
+	$Closed.hide()
+	$Open.show()
+	$LightOccluder2D.light_mask = 4
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

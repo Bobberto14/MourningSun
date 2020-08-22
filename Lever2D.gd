@@ -10,6 +10,7 @@ var inside
 func _ready():
 	connect("body_entered", self, "_area_entered")
 	connect("body_exited", self, "_area_exited")
+	$On.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,6 +26,10 @@ func _area_entered(body):
 func _area_exited(body):
 	inside = false
 	print("exiting")
+
+func flip():
+	$Off.hide()
+	$On.show()
 
 #func _process(delta):
 	

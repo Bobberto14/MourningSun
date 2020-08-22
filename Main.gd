@@ -41,8 +41,8 @@ func _process(delta):
 		a = (player.get_position() - knight.get_position()).normalized() * knight.speed
 		knight.move_and_slide(a, Vector2(0, 0))
 	if lever.inside and Input.is_action_just_pressed("interact"):
-		door.hide()
 		door.open()
+		lever.flip()
 
 func new_game():
 	$Player.start($PlayerPosition.position)

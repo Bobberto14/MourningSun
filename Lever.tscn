@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Lever2D.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/SwitchOFF_Sprite.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/SwitchON_Sprite.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 40 )
@@ -13,11 +14,12 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.909804, 0.184314, 0.184314, 1 )
-scale = Vector2( 0.5, 1 )
+[node name="Off" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 1 )
+
+[node name="On" type="Sprite" parent="."]
+texture = ExtResource( 3 )

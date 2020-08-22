@@ -3,14 +3,12 @@
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Knight.tscn" type="PackedScene" id=3]
-[ext_resource path="res://mysoul.png" type="Texture" id=4]
-[ext_resource path="res://caster.png" type="Texture" id=5]
-[ext_resource path="res://RigidBody2D.gd" type="Script" id=6]
+[ext_resource path="res://Sprites/mysoul.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/CornerWall_nonEdgeWall_Sprite.png" type="Texture" id=5]
 [ext_resource path="res://Lever.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Door.tscn" type="PackedScene" id=8]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.9828, 16.0048 )
+[ext_resource path="res://Floorx5.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sprites/caster.png" type="Texture" id=10]
 
 [node name="Stage" type="Node"]
 script = ExtResource( 1 )
@@ -21,22 +19,27 @@ position = Vector2( 168.91, 95.5533 )
 texture = ExtResource( 4 )
 
 [node name="Lever" parent="." instance=ExtResource( 7 )]
-position = Vector2( 160, 64 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 200, 80 )
+
+[node name="Door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 180, 120 )
+scale = Vector2( 2, 2 )
+collision_layer = 2
 
 [node name="DarkBackground" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 100, 100 )
-texture = ExtResource( 5 )
+texture = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 264, 72 )
+position = Vector2( 80, 48 )
 scale = Vector2( 0.25, 0.25 )
 collision_layer = 4
 collision_mask = 2147483661
-speed = 60
+speed = 30
 
 [node name="Knight" parent="." instance=ExtResource( 3 )]
-position = Vector2( 24, 128.133 )
+position = Vector2( 60, 124 )
 collision_layer = 8
 collision_mask = 15
 speed = 30
@@ -50,28 +53,130 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( 152, 152 )
-scale = Vector2( 98.352, 1.02487 )
-collision_layer = 3
-collision_mask = 15
-mode = 1
-gravity_scale = 0.0
-contact_monitor = true
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Walls" type="Node" parent="."]
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D"]
-scale = Vector2( 1.01084, 1 )
+[node name="Floorx5" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 0, 136 )
+
+[node name="Floorx13" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 8, 96 )
+rotation = 1.57079
+
+[node name="Floorx16" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 176, 64 )
+rotation = 1.57079
+
+[node name="Floorx25" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 176, 32 )
+rotation = 1.57079
+
+[node name="Floorx29" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 160, 104 )
+rotation = -1.57079
+
+[node name="Floorx30" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 160, 72 )
+rotation = -1.57079
+
+[node name="Floorx14" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 8, 56 )
+rotation = 1.57079
+
+[node name="Floorx15" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 8, 24 )
+rotation = 1.57079
+
+[node name="Floorx17" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 48, 32 )
+rotation = 3.14159
+
+[node name="Floorx19" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 128, 32 )
+rotation = 3.14159
+
+[node name="Floorx20" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 168.074, 32 )
+rotation = 3.14159
+
+[node name="Floorx21" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 208, 32 )
+rotation = 3.14159
+
+[node name="Floorx22" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 248, 32 )
+rotation = 3.14159
+
+[node name="Floorx23" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 288, 32 )
+rotation = 3.14159
+
+[node name="Floorx24" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 312, 32 )
+rotation = 3.14159
+
+[node name="Floorx26" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 312, 72 )
+rotation = 4.71238
+
+[node name="Floorx27" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 312, 136 )
+rotation = 4.71238
+
+[node name="Floorx28" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 312, 112 )
+rotation = 4.71238
+
+[node name="Floorx18" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 88, 32 )
+rotation = 3.14159
+
+[node name="Floorx6" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 40, 136 )
+
+[node name="Floorx7" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 80, 136 )
+
+[node name="Floorx8" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 120, 136 )
+
+[node name="Floorx9" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 160, 136 )
+
+[node name="Floorx10" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 200, 136 )
+
+[node name="Floorx11" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 240, 136 )
+
+[node name="Floorx12" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 280, 136 )
+
+[node name="Corner" type="Sprite" parent="Walls"]
+position = Vector2( 4, 28 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 1 )
+[node name="Corner4" type="Sprite" parent="Walls"]
+position = Vector2( 316, 28 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
 
-[node name="Door" parent="." instance=ExtResource( 8 )]
-position = Vector2( 112, 104 )
-scale = Vector2( 0.5, 1 )
-collision_layer = 2
-[connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_RigidBody2D_body_entered"]
+[node name="Corner5" type="Sprite" parent="Walls"]
+position = Vector2( 316, 140 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="Corner6" type="Sprite" parent="Walls"]
+position = Vector2( 4, 140 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="Corner2" type="Sprite" parent="Walls"]
+position = Vector2( 172, 28 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="Corner3" type="Sprite" parent="Walls"]
+position = Vector2( 164, 28 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
