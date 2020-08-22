@@ -18,7 +18,9 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	inside = true
+	print("entering")
 
 
 func _on_Area2D_body_exited(body):
 	inside = false
+	print("exiting")

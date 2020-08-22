@@ -4,9 +4,10 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 24 )
+extents = Vector2( 32, 40 )
 
 [node name="Lever" type="Area2D"]
+collision_mask = 3
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -18,5 +19,4 @@ scale = Vector2( 0.5, 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 1 )
