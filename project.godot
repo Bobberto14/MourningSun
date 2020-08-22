@@ -21,7 +21,17 @@ _global_script_class_icons={
 [application]
 
 config/name="MourningSun"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=320
+window/size/height=180
+window/size/test_width=1280
+window/size/test_height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [gdnative]
 
@@ -30,6 +40,7 @@ singletons=[ "res://git_api.gdnlib" ]
 [rendering]
 
 quality/driver/driver_name="GLES2"
+quality/2d/use_pixel_snap=true
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"
