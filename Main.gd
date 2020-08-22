@@ -12,7 +12,9 @@ extends Node
 
 onready var player = $Player
 onready var knight = $Knight
+onready var lever = $Lever
 onready var label = $Label
+onready var door = $Door
 
 var screen_size
 var a
@@ -38,7 +40,9 @@ func _process(delta):
 	if Input.is_action_pressed("sing"):
 		a = (player.get_position() - knight.get_position()).normalized() * knight.speed
 		knight.move_and_slide(a, Vector2(0, 0))
-
+	if lever.inside and Input.is_action_just_pressed("interact"):
+		door.hide()
+		door.open()
 
 func new_game():
 	$Player.start($PlayerPosition.position)

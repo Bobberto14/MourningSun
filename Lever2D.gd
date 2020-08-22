@@ -26,6 +26,6 @@ func _area_exited(body):
 	inside = false
 	print("exiting")
 
-func _process(delta):
-	if inside and Input.is_action_just_pressed("interact"):
-		print("opening")
+#func _process(delta):
+	
+		# TODO: hook this up to doors

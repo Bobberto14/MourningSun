@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://caster.png" type="Texture" id=5]
 [ext_resource path="res://RigidBody2D.gd" type="Script" id=6]
 [ext_resource path="res://Lever.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.9828, 16.0048 )
@@ -30,11 +31,14 @@ texture = ExtResource( 5 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 264, 72 )
 scale = Vector2( 0.25, 0.25 )
-collision_mask = 2147483650
+collision_layer = 4
+collision_mask = 2147483661
 speed = 60
 
 [node name="Knight" parent="." instance=ExtResource( 3 )]
-position = Vector2( 48, 128 )
+position = Vector2( 24, 128.133 )
+collision_layer = 8
+collision_mask = 15
 speed = 30
 
 [node name="Label" type="Label" parent="."]
@@ -50,6 +54,7 @@ __meta__ = {
 position = Vector2( 152, 152 )
 scale = Vector2( 98.352, 1.02487 )
 collision_layer = 3
+collision_mask = 15
 mode = 1
 gravity_scale = 0.0
 contact_monitor = true
@@ -64,4 +69,9 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource( 1 )
+
+[node name="Door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 112, 104 )
+scale = Vector2( 0.5, 1 )
+collision_layer = 2
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_RigidBody2D_body_entered"]
