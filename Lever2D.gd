@@ -8,7 +8,8 @@ var inside
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	connect("body_entered", self, "_area_entered")
+	connect("body_exited", self, "_area_exited")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,11 +17,15 @@ func _ready():
 #	pass
 
 
-func _on_Area2D_body_entered(body):
+func _area_entered(body):
 	inside = true
 	print("entering")
 
 
-func _on_Area2D_body_exited(body):
+func _area_exited(body):
 	inside = false
 	print("exiting")
+
+func _process(delta):
+	if inside and Input.is_action_just_pressed("interact"):
+		print("opening")
