@@ -1,5 +1,6 @@
 extends Area2D
 
+signal hit
 export var speed = 75
 
 var screen_size

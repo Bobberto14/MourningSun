@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Knight.tscn" type="PackedScene" id=3]
 [ext_resource path="res://mysoul.png" type="Texture" id=4]
+[ext_resource path="res://caster.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.0
 
 [node name="Stage" type="Node"]
 script = ExtResource( 1 )
@@ -14,16 +18,35 @@ position = Vector2( 168.91, 95.5533 )
 texture = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 260, 100 )
+position = Vector2( 264, 72 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 7
+collision_mask = 7
 
 [node name="Knight" parent="." instance=ExtResource( 3 )]
-position = Vector2( 49.739, 74.0589 )
+position = Vector2( 56, 72 )
+collision_layer = 7
+collision_mask = 7
+speed = 50
 
 [node name="Label" type="Label" parent="."]
-margin_left = 269.695
-margin_top = 46.0729
-margin_right = 309.695
-margin_bottom = 60.0729
+margin_left = 240.0
+margin_top = 24.0
+margin_right = 280.0
+margin_bottom = 38.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 150, 100 )
+collision_layer = 7
+collision_mask = 7
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )

@@ -1,17 +1,29 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Knight.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://light.png" type="Texture" id=3]
 
+[sub_resource type="CircleShape2D" id=1]
+radius = 38.8208
+
 [node name="Knight" type="KinematicBody2D"]
+position = Vector2( 0.0834274, 0 )
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 10
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.552941, 0.866667, 0.615686, 1 )
 texture = ExtResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
-scale = Vector2( 2, 2 )
+position = Vector2( 8, 7.83315 )
+scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
