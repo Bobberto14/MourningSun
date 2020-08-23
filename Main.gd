@@ -33,7 +33,7 @@ func _process(delta):
 	dist = a.distance_to(b)
 	speed
 	label.set_text(str(dist))
-	if dist <=200:
+	if dist <=150:
 		$DarkBackground.hide()
 	else: $DarkBackground.show()
 	knight.update_light(dist)
