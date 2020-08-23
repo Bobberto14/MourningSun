@@ -20,7 +20,7 @@ var screen_size
 var a
 var b
 var dist
-var speed
+var mod
 
 func _ready():
 	screen_size = player.screen_size
@@ -31,9 +31,10 @@ func _process(delta):
 	a = knight.get_position()
 	b = player.get_position()
 	dist = a.distance_to(b)
-	speed
-	label.set_text(str(dist))
-	if dist <=150:
+	mod = dist/255
+	label.set_text(str(mod) + " " + str(dist))
+	$DarkBackground.modulate.a = mod
+	if dist <=50:
 		$DarkBackground.hide()
 	else: $DarkBackground.show()
 	knight.update_light(dist)
