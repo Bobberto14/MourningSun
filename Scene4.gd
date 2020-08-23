@@ -14,7 +14,7 @@ onready var player = $Player
 onready var knight = $Knight
 onready var key = $Key
 onready var door = $Door
-onready var label = $KeyLabel
+onready var label = $KeyNote
 
 var screen_size
 var a
@@ -52,6 +52,7 @@ func _process(delta):
 			label.show()
 		elif 124 > b.x and b.x > 88:
 			door.open()
+			label.hide()
 
 func new_game():
 	$Player.start($PlayerPosition.position)

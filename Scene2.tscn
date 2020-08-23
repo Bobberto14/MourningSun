@@ -18,6 +18,7 @@ script = ExtResource( 10 )
 [node name="Background" parent="." instance=ExtResource( 4 )]
 
 [node name="Door" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.0235294, 0.0509804, 1, 1 )
 position = Vector2( 220, 68 )
 
 [node name="Grate2" parent="." instance=ExtResource( 8 )]
@@ -25,6 +26,15 @@ position = Vector2( 160, 100 )
 
 [node name="Grate" parent="." instance=ExtResource( 8 )]
 position = Vector2( 144, 100 )
+
+[node name="Grate3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 16, 100 )
+
+[node name="Grate4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 16, 100 )
+
+[node name="Grate5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 32, 100 )
 
 [node name="Lever" parent="." instance=ExtResource( 3 )]
 position = Vector2( 84, 136 )
@@ -37,12 +47,12 @@ nextScene = "res://Scene3.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 104, 36 )
-scale = Vector2( 0.25, 0.25 )
 
 [node name="Walls" type="Node" parent="."]
 
 [node name="Floorx5" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 0, 92 )
+position = Vector2( 80, 108 )
+rotation = 3.14159
 
 [node name="Floorx6" parent="Walls" instance=ExtResource( 2 )]
 position = Vector2( 40, 92 )
@@ -145,7 +155,7 @@ rotation = -3.14159
 position = Vector2( 56, 168 )
 
 [node name="Floorx28" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 60, 96 )
+position = Vector2( 8, 92 )
 rotation = 1.5708
 
 [node name="Floorx29" parent="Walls" instance=ExtResource( 2 )]
@@ -161,14 +171,17 @@ position = Vector2( 160, 168 )
 rotation = 8.88506e-06
 
 [node name="Floorx30" parent="Walls" instance=ExtResource( 2 )]
-position = Vector2( 60, 136 )
+position = Vector2( 8, 132 )
 rotation = 1.5708
+
+[node name="Floorx38" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 16, 168 )
+
+[node name="Floorx39" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 8, 168 )
 
 [node name="Corner" parent="Walls" instance=ExtResource( 9 )]
 position = Vector2( 4, 24 )
-
-[node name="Corner2" parent="Walls" instance=ExtResource( 9 )]
-position = Vector2( 4, 96 )
 
 [node name="Corner3" parent="Walls" instance=ExtResource( 9 )]
 position = Vector2( 204, 100 )
@@ -188,20 +201,14 @@ position = Vector2( 316, 8 )
 [node name="Corner6" parent="Walls" instance=ExtResource( 9 )]
 position = Vector2( 204, 104 )
 
-[node name="Corner8" parent="Walls" instance=ExtResource( 9 )]
-position = Vector2( 56, 100 )
-
 [node name="Corner10" parent="Walls" instance=ExtResource( 9 )]
-position = Vector2( 56, 172 )
+position = Vector2( 4, 172 )
 
 [node name="Corner11" parent="Walls" instance=ExtResource( 9 )]
 position = Vector2( 204, 172 )
-
-[node name="Corner9" parent="Walls" instance=ExtResource( 9 )]
-position = Vector2( 56, 104 )
 
 [node name="Corner7" parent="Walls" instance=ExtResource( 9 )]
 position = Vector2( 316, 96 )
 
 [node name="Knight" parent="." instance=ExtResource( 7 )]
-position = Vector2( 20, 84 )
+position = Vector2( 24, 84 )

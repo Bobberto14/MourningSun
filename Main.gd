@@ -23,6 +23,7 @@ var speed
 
 func _ready():
 	screen_size = player.screen_size
+	$Label2.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,6 +31,9 @@ func _process(delta):
 	a = knight.get_position()
 	b = player.get_position()
 	dist = a.distance_to(b)
+	if dist > 96:
+		$Label2.show()
+	else: $Label2.hide()
 	$DarkBackground.modulate.a = (dist-50)/100
 	knight.update_light(dist)
 	if Input.is_action_pressed("sing"):

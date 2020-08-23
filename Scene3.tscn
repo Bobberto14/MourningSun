@@ -17,7 +17,8 @@ script = ExtResource( 9 )
 [node name="Background" parent="." instance=ExtResource( 1 )]
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
-position = Vector2( 204, 68 )
+modulate = Color( 0.0235294, 0.0509804, 1, 1 )
+position = Vector2( 128, 68 )
 
 [node name="Lever" parent="." instance=ExtResource( 2 )]
 position = Vector2( 72, 116 )
@@ -32,15 +33,15 @@ position = Vector2( 264, 100 )
 position = Vector2( 280, 100 )
 
 [node name="ExitDoor" parent="." instance=ExtResource( 10 )]
-position = Vector2( 272, 68 )
+position = Vector2( 232, 68 )
 nextScene = "res://Scene4.tscn"
 
 [node name="DarkBackground" parent="." instance=ExtResource( 4 )]
 
 [node name="Knight" parent="." instance=ExtResource( 6 )]
-position = Vector2( 20, 84.5568 )
+position = Vector2( 20, 84 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 104, 36 )
+position = Vector2( 64, 36 )
 
 [node name="Walls2" parent="." instance=ExtResource( 8 )]

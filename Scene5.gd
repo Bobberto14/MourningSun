@@ -14,7 +14,7 @@ onready var player = $Player
 onready var knight = $Knight
 onready var key = $Key
 onready var keydoor = $KeyDoor
-onready var label = $KeyLabel
+onready var label = $KeyNote
 onready var lever = $Lever
 onready var leverdoor = $LeverDoor
 
@@ -57,6 +57,7 @@ func _process(delta):
 			label.show()
 		elif b.distance_to(Vector2(72, 144)) < 32:
 			keydoor.open()
+			label.hide()
 
 func new_game():
 	$Player.start($PlayerPosition.position)

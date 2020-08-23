@@ -8,6 +8,7 @@
 script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168, 96 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5

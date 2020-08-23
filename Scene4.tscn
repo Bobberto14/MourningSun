@@ -10,7 +10,7 @@
 [ext_resource path="res://Corner.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene4.gd" type="Script" id=9]
 [ext_resource path="res://Knight.tscn" type="PackedScene" id=10]
-[ext_resource path="res://KeyLabel.tscn" type="PackedScene" id=11]
+[ext_resource path="res://KeyNote.tscn" type="PackedScene" id=12]
 
 [node name="Scene4" type="Node"]
 script = ExtResource( 9 )
@@ -22,11 +22,9 @@ position = Vector2( 220, 116 )
 nextScene = "res://Scene5.tscn"
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.0235294, 0.0509804, 1, 1 )
 position = Vector2( 120, 116 )
 
 [node name="Key" parent="." instance=ExtResource( 2 )]
-modulate = Color( 0.0235294, 0.0509804, 1, 1 )
 position = Vector2( 72, 64 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Key"]
@@ -144,4 +142,4 @@ position = Vector2( 48, 96 )
 [node name="Knight" parent="." instance=ExtResource( 10 )]
 position = Vector2( 20, 132.278 )
 
-[node name="KeyLabel" parent="." instance=ExtResource( 11 )]
+[node name="KeyNote" parent="." instance=ExtResource( 12 )]
