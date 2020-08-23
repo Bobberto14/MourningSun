@@ -9,15 +9,16 @@
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -17.183
+volume_db = -35.0
 
 [node name="Door" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -12.77
+volume_db = -30.0
 
 [node name="Whine" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -80.0
+autoplay = true
 
 [node name="KeyPickup" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

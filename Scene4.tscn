@@ -149,3 +149,5 @@ position = Vector2( 20, 132.278 )
 [node name="MotherCall" parent="." instance=ExtResource( 11 )]
 
 [node name="Sounds" parent="." instance=ExtResource( 13 )]
+
+[node name="Sounds2" parent="." instance=ExtResource( 13 )]

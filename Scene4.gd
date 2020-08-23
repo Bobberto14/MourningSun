@@ -32,6 +32,8 @@ func _ready():
 	$MotherCall.hide()
 	$MotherCall.set_text("What's that sparkling?")
 	$ExitDoor/SceneChanger.fade_in()
+	$Sounds/Ambience.play()
+	$Sounds/Whine.play()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -42,6 +44,7 @@ func _process(delta):
 		key.show()
 	else:
 		key.hide()
+	$Sounds/Whine.set_volume_db((dist*-1)+25)
 	$DarkBackground.modulate.a = (dist-50)/100
 	$Knight.update_light(dist)
 	if Input.is_action_pressed("sing"):
@@ -59,6 +62,7 @@ func _process(delta):
 		elif 124 > b.x and b.x > 88:
 			if has_key:
 				door.open()
+				$Sounds/Door.play()
 				label.hide()
 
 func new_game():

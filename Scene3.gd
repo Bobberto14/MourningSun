@@ -27,6 +27,8 @@ func _ready():
 	$MotherCall.hide()
 	$MotherCall.set_text("Are you there?")	
 	$ExitDoor/SceneChanger.fade_in()
+	$Sounds/Ambience.play()
+	$Sounds/Whine.play()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,6 +36,7 @@ func _process(delta):
 	a = knight.get_position()
 	b = player.get_position()
 	dist = a.distance_to(b)
+	$Sounds/Whine.set_volume_db((dist*-1)+25)
 	$DarkBackground.modulate.a = (dist-50)/100
 	$Knight.update_light(dist)
 	if Input.is_action_pressed("sing"):
@@ -43,6 +46,7 @@ func _process(delta):
 	else: $MotherCall.hide()
 	if lever.inside and Input.is_action_just_pressed("interact"):
 		door.open()
+		$Sounds/Door.play()
 		lever.flip()
 
 func new_game():
