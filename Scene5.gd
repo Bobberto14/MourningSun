@@ -31,6 +31,8 @@ func _ready():
 	screen_size = player.screen_size
 	key.hide()
 	label.hide()
+	$MotherCall.hide()
+	$MotherCall.set_text("Where are you?")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,6 +49,8 @@ func _process(delta):
 	if Input.is_action_pressed("sing"):
 		a = (player.get_position() - knight.get_position()).normalized() * knight.speed
 		knight.move_and_slide(a, Vector2(0, 0))
+		$MotherCall.show()
+	else: $MotherCall.hide()
 	if Input.is_action_just_pressed("interact"):
 		if lever.inside:
 			leverdoor.open()

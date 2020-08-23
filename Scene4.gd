@@ -29,14 +29,15 @@ func _ready():
 	screen_size = player.screen_size
 	key.hide()
 	label.hide()
-
+	$MotherCall.hide()
+	$MotherCall.set_text("What's that sparkling?")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	a = knight.get_position()
 	b = player.get_position()
 	dist = a.distance_to(b)
-	if has_key == false and dist < 120 and key.inside:
+	if has_key == false and dist < 80 and key.inside:
 		key.show()
 	else:
 		key.hide()
@@ -45,6 +46,8 @@ func _process(delta):
 	if Input.is_action_pressed("sing"):
 		a = (player.get_position() - knight.get_position()).normalized() * knight.speed
 		knight.move_and_slide(a, Vector2(0, 0))
+		$MotherCall.show()
+	else: $MotherCall.hide()
 	if Input.is_action_just_pressed("interact"):
 		if b.distance_to(Vector2(64, 68)) < 16:
 			key.hide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Floorx5.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Key.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Corner.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scene4.gd" type="Script" id=9]
 [ext_resource path="res://Knight.tscn" type="PackedScene" id=10]
+[ext_resource path="res://MotherCall.tscn" type="PackedScene" id=11]
 [ext_resource path="res://KeyNote.tscn" type="PackedScene" id=12]
 
 [node name="Scene4" type="Node"]
@@ -143,3 +144,5 @@ position = Vector2( 48, 96 )
 position = Vector2( 20, 132.278 )
 
 [node name="KeyNote" parent="." instance=ExtResource( 12 )]
+
+[node name="MotherCall" parent="." instance=ExtResource( 11 )]
