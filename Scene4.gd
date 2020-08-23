@@ -52,9 +52,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("interact"):
 		if b.distance_to(Vector2(64, 68)) < 16:
 			key.hide()
+			$Sounds/KeyPickup.play()
 			has_key = true
 			label.show()
-			$MotherCall.set_text("I hear you, Mother")
+			$MotherCall.set_text("I hear you, Mother.")
 		elif 124 > b.x and b.x > 88:
 			if has_key:
 				door.open()

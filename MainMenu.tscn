@@ -1,25 +1,81 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://CanvasLayer.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/caster.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/white.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/dpcomic.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
 
 [node name="Node" type="Node"]
 script = ExtResource( 2 )
 
-[node name="Background" parent="." instance=ExtResource( 1 )]
-position = Vector2( 168, 96 )
+[node name="Initial" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 96 )
+scale = Vector2( 10, 6 )
+texture = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Final" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 5 )
+
+[node name="Title" type="Label" parent="."]
 anchor_left = 0.5
-anchor_top = 0.318
+anchor_top = 0.152
 anchor_right = 0.5
-anchor_bottom = 0.318
-margin_left = -43.5
-margin_top = -7.0
-margin_right = 43.5
-margin_bottom = 7.0
+anchor_bottom = 0.21
+margin_left = -128.0
+margin_right = 128.0
+margin_bottom = 84.56
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.607843, 0.607843, 0.607843, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Mourning Sun"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="."]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 297.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 4 )
+text = "Greg Miller               Game Designer, Developer
+Joshua Liew               Game Designer, 2D Artist
+Ariana                                           Vocals
+Simon Miller                         		Language Design			"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnButton" type="Button" parent="."]
+margin_left = 216.0
+margin_top = 156.0
+margin_right = 319.0
+margin_bottom = 178.0
+custom_fonts/font = SubResource( 5 )
+text = "Return to Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -28,16 +84,31 @@ __meta__ = {
 script = ExtResource( 3 )
 nextScene = "res://Scene1.tscn"
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="StartButton" type="Button" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_top = 0.828
 anchor_right = 0.5
 anchor_bottom = 0.828
-margin_left = -20.5
-margin_top = -20.0
-margin_right = 20.5
+margin_left = -96.0
+margin_top = -17.04
+margin_right = -53.0
+margin_bottom = 4.95999
+custom_fonts/font = SubResource( 2 )
 text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer" method="_on_Button_pressed"]
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer"]
+margin_left = 208.0
+margin_top = 132.0
+margin_right = 261.0
+margin_bottom = 154.0
+custom_fonts/font = SubResource( 3 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ReturnButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/StartButton" to="CanvasLayer" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CreditsButton" to="." method="_on_Credits_Button_pressed"]
