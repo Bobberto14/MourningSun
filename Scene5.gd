@@ -33,14 +33,14 @@ func _ready():
 	label.hide()
 	$MotherCall.hide()
 	$MotherCall.set_text("Where are you?")
-
+	$ExitDoor/SceneChanger.fade_in()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	a = knight.get_position()
 	b = player.get_position()
 	dist = a.distance_to(b)
-	if has_key == false and dist < 120 and key.inside:
+	if has_key == false and dist < 100 and key.inside:
 		key.show()
 	else:
 		key.hide()

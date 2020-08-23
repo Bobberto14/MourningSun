@@ -13,5 +13,7 @@ func _ready():
 
 func _area_entered(body):
 	print("Level beaten")
+	$SceneChanger.fade_out()
+	yield($SceneChanger/AnimationPlayer, "animation_finished")
 	get_tree().change_scene(nextScene)
  

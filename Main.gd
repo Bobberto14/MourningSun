@@ -26,6 +26,7 @@ func _ready():
 	$Label2.hide()
 	$MotherCall.hide()
 	$MotherCall.set_text("Is that...?")
+	$ExitDoor/SceneChanger.fade_in()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

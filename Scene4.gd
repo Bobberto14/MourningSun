@@ -31,13 +31,14 @@ func _ready():
 	label.hide()
 	$MotherCall.hide()
 	$MotherCall.set_text("What's that sparkling?")
-
+	$ExitDoor/SceneChanger.fade_in()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	a = knight.get_position()
 	b = player.get_position()
 	dist = a.distance_to(b)
-	if has_key == false and dist < 80 and key.inside:
+	if has_key == false and dist < 100 and key.inside:
 		key.show()
 	else:
 		key.hide()
@@ -53,9 +54,11 @@ func _process(delta):
 			key.hide()
 			has_key = true
 			label.show()
+			$MotherCall.set_text("I hear you, Mother")
 		elif 124 > b.x and b.x > 88:
-			door.open()
-			label.hide()
+			if has_key:
+				door.open()
+				label.hide()
 
 func new_game():
 	$Player.start($PlayerPosition.position)

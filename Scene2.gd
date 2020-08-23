@@ -26,6 +26,7 @@ func _ready():
 	screen_size = player.screen_size
 	$MotherCall.hide()
 	$MotherCall.set_text("Mother?")
+	$ExitDoor/SceneChanger.fade_in()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
