@@ -13,6 +13,7 @@ extends Node
 onready var player = $Player
 onready var knight = $Knight
 onready var lever = $Lever
+onready var label = $Label
 onready var door = $Door
 
 var screen_size
@@ -31,7 +32,7 @@ func _process(delta):
 	b = player.get_position()
 	dist = a.distance_to(b)
 	$DarkBackground.modulate.a = (dist-50)/100
-	knight.update_light(dist)
+	$Knight.update_light(dist)
 	if Input.is_action_pressed("sing"):
 		a = (player.get_position() - knight.get_position()).normalized() * knight.speed
 		knight.move_and_slide(a, Vector2(0, 0))

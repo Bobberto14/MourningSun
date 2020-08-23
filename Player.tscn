@@ -8,9 +8,11 @@ extents = Vector2( 32.2897, 32.4686 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 0, -0.420448 )
-collision_mask = 2147483654
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 4
+collision_mask = 2147483661
 script = ExtResource( 2 )
-speed = 50
+speed = 65
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

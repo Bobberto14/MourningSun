@@ -1,0 +1,181 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lever.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://DarkBackground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Knight.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Floorx5.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ExitDoor.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Corner.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Main.gd" type="Script" id=10]
+[ext_resource path="res://Sprites/CornerWall_nonEdgeWall_Sprite.png" type="Texture" id=11]
+
+[node name="Scene1" type="Node"]
+script = ExtResource( 10 )
+
+[node name="Background" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168.91, 103.553 )
+
+[node name="Lever" parent="." instance=ExtResource( 2 )]
+position = Vector2( 208, 80 )
+
+[node name="Door" parent="." instance=ExtResource( 3 )]
+position = Vector2( 184, 120 )
+
+[node name="ExitDoor" parent="." instance=ExtResource( 8 )]
+position = Vector2( 264, 120 )
+nextScene = "res://Scene2.tscn"
+
+[node name="DarkBackground" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, 8 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 80, 56 )
+speed = 30
+
+[node name="Knight" parent="." instance=ExtResource( 6 )]
+position = Vector2( 28, 136.265 )
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Floorx5" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 0, 144 )
+
+[node name="Floorx13" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 8, 104 )
+rotation = 1.57079
+
+[node name="Floorx16" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 176, 56 )
+rotation = 1.57079
+
+[node name="Floorx25" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 176, 40 )
+rotation = 1.57079
+
+[node name="Floorx29" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 160, 96 )
+rotation = -1.57079
+
+[node name="Floorx30" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 160, 80 )
+rotation = -1.57079
+
+[node name="Floorx14" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 8, 64 )
+rotation = 1.57079
+
+[node name="Floorx15" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 8, 32 )
+rotation = 1.57079
+
+[node name="Floorx17" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 48, 40 )
+rotation = 3.14159
+
+[node name="Floorx19" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 128, 40 )
+rotation = 3.14159
+
+[node name="Floorx20" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 168.074, 40 )
+rotation = 3.14159
+
+[node name="Floorx21" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 208, 40 )
+rotation = 3.14159
+
+[node name="Floorx22" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 248, 40 )
+rotation = 3.14159
+
+[node name="Floorx23" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 288, 40 )
+rotation = 3.14159
+
+[node name="Floorx24" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 312, 40 )
+rotation = 3.14159
+
+[node name="Floorx26" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 312, 80 )
+rotation = 4.71238
+
+[node name="Floorx27" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 312, 144 )
+rotation = 4.71238
+
+[node name="Floorx28" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 312, 120 )
+rotation = 4.71238
+
+[node name="Floorx18" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 88, 40 )
+rotation = 3.14159
+
+[node name="Floorx6" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 40, 144 )
+
+[node name="Floorx7" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 80, 144 )
+
+[node name="Floorx8" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 120, 144 )
+
+[node name="Floorx9" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 160, 144 )
+
+[node name="Floorx10" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 200, 144 )
+
+[node name="Floorx11" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 240, 144 )
+
+[node name="Floorx12" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 280, 144 )
+
+[node name="Corner" parent="Walls" instance=ExtResource( 9 )]
+
+[node name="Corner4" type="Sprite" parent="Walls"]
+position = Vector2( 316, 36 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Corner5" type="Sprite" parent="Walls"]
+position = Vector2( 316, 148 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Corner6" type="Sprite" parent="Walls"]
+position = Vector2( 4, 148 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Corner2" type="Sprite" parent="Walls"]
+position = Vector2( 172, 36 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Corner3" type="Sprite" parent="Walls"]
+position = Vector2( 164, 36 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 12.0
+margin_right = 108.0
+margin_bottom = 31.0
+text = "WASD to move
+E to interact"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Label"]
+margin_left = 164.0
+margin_top = 4.0
+margin_right = 297.0
+margin_bottom = 18.0
+text = "Space or LMB to sing"

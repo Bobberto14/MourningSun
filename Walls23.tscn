@@ -1,0 +1,175 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Floorx5.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Corner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/CornerWall_nonEdgeWall_Sprite.png" type="Texture" id=3]
+
+[node name="Walls" type="Node"]
+
+[node name="Floorx5" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 92 )
+
+[node name="Floorx6" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 40, 92 )
+
+[node name="Floorx7" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 80, 92 )
+
+[node name="Floorx8" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 92 )
+
+[node name="Floorx9" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168, 92 )
+
+[node name="Floorx10" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 92 )
+
+[node name="Floorx11" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 240, 92 )
+
+[node name="Floorx12" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 280, 92 )
+
+[node name="Floorx13" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 312, 92 )
+rotation = -1.57079
+
+[node name="Floorx14" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 312, 52 )
+rotation = -1.57079
+
+[node name="Floorx15" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 316, 12 )
+rotation = -3.14159
+
+[node name="Floorx16" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 40, 28 )
+rotation = -3.14159
+
+[node name="Floorx17" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 52 )
+rotation = 1.5708
+
+[node name="Floorx18" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 20 )
+rotation = 1.5708
+
+[node name="Floorx19" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 80, 28 )
+rotation = -3.14159
+
+[node name="Floorx20" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 28 )
+rotation = -3.14159
+
+[node name="Floorx33" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 108 )
+rotation = -3.14159
+
+[node name="Floorx36" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 136, 108 )
+rotation = -3.14159
+
+[node name="Floorx37" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 208, 108 )
+rotation = -3.14159
+
+[node name="Floorx21" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 276, 12 )
+rotation = -3.14159
+
+[node name="Floorx23" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 176 )
+rotation = -1.57079
+
+[node name="Floorx31" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 196, 44 )
+rotation = -1.57079
+
+[node name="Floorx32" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 212, 4 )
+rotation = 1.57079
+
+[node name="Floorx22" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 236, 12 )
+rotation = -3.14159
+
+[node name="Floorx24" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 136 )
+rotation = -1.57079
+
+[node name="Floorx25" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 196, 28 )
+rotation = -3.14159
+
+[node name="Floorx26" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 156, 28 )
+rotation = -3.14159
+
+[node name="Floorx27" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56, 168 )
+
+[node name="Floorx28" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 60, 96 )
+rotation = 1.5708
+
+[node name="Floorx29" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 92, 168 )
+rotation = 8.88506e-06
+
+[node name="Floorx34" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 132, 168 )
+rotation = 8.88506e-06
+
+[node name="Floorx35" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 168 )
+rotation = 8.88506e-06
+
+[node name="Floorx30" type="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 60, 136 )
+rotation = 1.5708
+
+[node name="Corner" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Corner2" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4, 96 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Corner3" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 204, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Corner4" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 200, 8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Corner5" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 316, 8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Corner6" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 204, 104 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Corner8" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Corner9" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, 104 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Corner7" type="Sprite" parent="." instance=ExtResource( 2 )]
+position = Vector2( 316, 96 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )

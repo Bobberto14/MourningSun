@@ -8,13 +8,15 @@
 extents = Vector2( 32.023, 31.9759 )
 
 [node name="Knight" type="KinematicBody2D"]
-position = Vector2( 0.0338211, -0.0291386 )
-scale = Vector2( 0.24751, 0.238118 )
+position = Vector2( 0, -0.0496063 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 8
+collision_mask = 15
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = 10
+speed = 30
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.552941, 0.866667, 0.615686, 1 )

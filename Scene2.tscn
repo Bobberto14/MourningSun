@@ -1,0 +1,207 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Door.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Floorx5.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Lever.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://DarkBackground.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Knight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Grate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Corner.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene2.gd" type="Script" id=10]
+[ext_resource path="res://ExitDoor.tscn" type="PackedScene" id=11]
+
+[node name="Scene2" type="Node"]
+script = ExtResource( 10 )
+
+[node name="Background" parent="." instance=ExtResource( 4 )]
+
+[node name="Door" parent="." instance=ExtResource( 1 )]
+position = Vector2( 220, 68 )
+
+[node name="Grate2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 160, 100 )
+
+[node name="Grate" parent="." instance=ExtResource( 8 )]
+position = Vector2( 144, 100 )
+
+[node name="Lever" parent="." instance=ExtResource( 3 )]
+position = Vector2( 84, 136 )
+
+[node name="ExitDoor" parent="." instance=ExtResource( 11 )]
+position = Vector2( 264, 68 )
+nextScene = "res://Scene3.tscn"
+
+[node name="DarkBackground" parent="." instance=ExtResource( 5 )]
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 104, 36 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Floorx5" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 0, 92 )
+
+[node name="Floorx6" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 40, 92 )
+
+[node name="Floorx7" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 80, 92 )
+
+[node name="Floorx8" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 96, 92 )
+
+[node name="Floorx9" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 168, 92 )
+
+[node name="Floorx10" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 200, 92 )
+
+[node name="Floorx11" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 240, 92 )
+
+[node name="Floorx12" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 280, 92 )
+
+[node name="Floorx13" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 312, 92 )
+rotation = -1.57079
+
+[node name="Floorx14" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 312, 52 )
+rotation = -1.57079
+
+[node name="Floorx15" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 316, 12 )
+rotation = -3.14159
+
+[node name="Floorx16" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 40, 28 )
+rotation = -3.14159
+
+[node name="Floorx17" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 8, 52 )
+rotation = 1.5708
+
+[node name="Floorx18" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 8, 20 )
+rotation = 1.5708
+
+[node name="Floorx19" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 80, 28 )
+rotation = -3.14159
+
+[node name="Floorx20" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 120, 28 )
+rotation = -3.14159
+
+[node name="Floorx33" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 96, 108 )
+rotation = -3.14159
+
+[node name="Floorx36" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 136, 108 )
+rotation = -3.14159
+
+[node name="Floorx37" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 208, 108 )
+rotation = -3.14159
+
+[node name="Floorx21" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 276, 12 )
+rotation = -3.14159
+
+[node name="Floorx23" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 200, 176 )
+rotation = -1.57079
+
+[node name="Floorx31" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 196, 44 )
+rotation = -1.57079
+
+[node name="Floorx32" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 212, 4 )
+rotation = 1.57079
+
+[node name="Floorx22" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 236, 12 )
+rotation = -3.14159
+
+[node name="Floorx24" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 200, 136 )
+rotation = -1.57079
+
+[node name="Floorx25" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 196, 28 )
+rotation = -3.14159
+
+[node name="Floorx26" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 156, 28 )
+rotation = -3.14159
+
+[node name="Floorx27" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 56, 168 )
+
+[node name="Floorx28" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 60, 96 )
+rotation = 1.5708
+
+[node name="Floorx29" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 92, 168 )
+rotation = 8.88506e-06
+
+[node name="Floorx34" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 132, 168 )
+rotation = 8.88506e-06
+
+[node name="Floorx35" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 160, 168 )
+rotation = 8.88506e-06
+
+[node name="Floorx30" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 60, 136 )
+rotation = 1.5708
+
+[node name="Corner" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 4, 24 )
+
+[node name="Corner2" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 4, 96 )
+
+[node name="Corner3" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 204, 100 )
+
+[node name="Corner4" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 200, 8 )
+
+[node name="Corner12" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 200, 16 )
+
+[node name="Corner13" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 200, 24 )
+
+[node name="Corner5" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 316, 8 )
+
+[node name="Corner6" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 204, 104 )
+
+[node name="Corner8" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 56, 100 )
+
+[node name="Corner10" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 56, 172 )
+
+[node name="Corner11" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 204, 172 )
+
+[node name="Corner9" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 56, 104 )
+
+[node name="Corner7" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 316, 96 )
+
+[node name="Knight" parent="." instance=ExtResource( 7 )]
+position = Vector2( 20, 84 )
