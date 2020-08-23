@@ -45,9 +45,9 @@ collision_mask = 15
 speed = 30
 
 [node name="Label" type="Label" parent="."]
-margin_left = 112.0
+margin_left = 244.0
 margin_top = 8.0
-margin_right = 152.0
+margin_right = 284.0
 margin_bottom = 22.0
 __meta__ = {
 "_edit_use_anchors_": false
