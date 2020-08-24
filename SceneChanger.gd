@@ -15,7 +15,6 @@ onready var black = $Control/Black
 func fade_out():
 	animation_player.play("Fade")
 	yield(animation_player, "animation_finished")
-#	animation_player.play_backwards("Fade")
 	
 func fade_in():
 	animation_player.play_backwards("Fade")
