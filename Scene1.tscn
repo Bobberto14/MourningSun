@@ -42,6 +42,7 @@ position = Vector2( 0, 8 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 80, 56 )
+scale = Vector2( 1, 1 )
 speed = 30
 
 [node name="Knight" parent="." instance=ExtResource( 6 )]
@@ -201,4 +202,4 @@ __meta__ = {
 
 [node name="Voice" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = -20.0
+volume_db = -15.0

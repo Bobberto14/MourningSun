@@ -51,6 +51,7 @@ nextScene = "res://Scene3.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 104, 36 )
+scale = Vector2( 1, 1 )
 
 [node name="Walls" type="Node" parent="."]
 

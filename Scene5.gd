@@ -55,12 +55,12 @@ func _process(delta):
 	if Input.is_action_pressed("sing"):
 		a = (player.get_position() - knight.get_position()).normalized() * knight.speed
 		knight.move_and_slide(a, Vector2(0, 0))
-		if volume < -60:
-			$Sounds/Song.set_volume_db(-60)
-		elif volume < -20:
+		if volume < -50:
+			$Sounds/Song.set_volume_db(-50)
+		elif volume < -10:
 			$Sounds/Song.set_volume_db(volume+.5)
-		elif volume >= -20:
-			$Sounds/Song.set_volume_db(-21)
+		elif volume >= -10:
+			$Sounds/Song.set_volume_db(-11)
 		$MotherCall.show()
 	else: 
 		$MotherCall.hide()

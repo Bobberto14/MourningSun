@@ -144,6 +144,7 @@ position = Vector2( 60, 40 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 48, 96 )
+scale = Vector2( 1, 1 )
 
 [node name="Knight" parent="." instance=ExtResource( 10 )]
 position = Vector2( 20, 132.278 )

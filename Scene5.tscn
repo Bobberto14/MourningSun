@@ -252,6 +252,7 @@ position = Vector2( 24, 164.278 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 84, 132 )
+scale = Vector2( 1, 1 )
 
 [node name="KeyNote" parent="." instance=ExtResource( 14 )]
 
