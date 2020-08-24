@@ -59,7 +59,7 @@ margin_bottom = 81.0
 custom_fonts/font = SubResource( 4 )
 text = "Greg Miller                 Game Designer, Developer
 Joshua Liew                Game Designer, 2D Artist
-Arianna                                           Vocals
+Arianna                                   Music, Vocals
 Simon Miller              	Audio and Language Design			"
 __meta__ = {
 "_edit_use_anchors_": false

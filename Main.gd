@@ -49,10 +49,10 @@ func _process(delta):
 		knight.move_and_slide(a, Vector2(0, 0))
 		if volume < -60:
 			$Sounds/Song.set_volume_db(-60)
-		elif volume < -25:
+		elif volume < -20:
 			$Sounds/Song.set_volume_db(volume+.5)
-		elif volume >= -25:
-			$Sounds/Song.set_volume_db(-25)
+		elif volume >= -20:
+			$Sounds/Song.set_volume_db(-21)
 		$MotherCall.show()
 	else: 
 		$MotherCall.hide()

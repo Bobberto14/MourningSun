@@ -4,7 +4,7 @@
 [ext_resource path="res://Sounds/316931__timbre__lever-pull-one-armed-bandit-from-freesound-316887-by-ylearkisto.wav" type="AudioStream" id=2]
 [ext_resource path="res://Sounds/344532__newagesoup__electric-cicadas04.wav" type="AudioStream" id=3]
 [ext_resource path="res://Sounds/237106__sqeeeek__sqeeeek-bell-ting1.wav" type="AudioStream" id=4]
-[ext_resource path="res://Sounds/Lulluby.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/Lulluby reverb.wav" type="AudioStream" id=5]
 
 [node name="Sounds" type="Node"]
 

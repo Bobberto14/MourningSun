@@ -40,22 +40,23 @@ func _process(delta):
 	$Sounds/Whine.set_volume_db((dist*-1)+25)
 	$DarkBackground.modulate.a = (dist-50)/100
 	$Knight.update_light(dist)
+	volume = $Sounds/Song.volume_db
 	if Input.is_action_pressed("sing"):
 		a = (player.get_position() - knight.get_position()).normalized() * knight.speed
 		knight.move_and_slide(a, Vector2(0, 0))
 		if volume < -60:
 			$Sounds/Song.set_volume_db(-60)
-		elif volume < -25:
+		elif volume < -20:
 			$Sounds/Song.set_volume_db(volume+.5)
-		elif volume >= -25:
-			$Sounds/Song.set_volume_db(-25)
+		elif volume >= -20:
+			$Sounds/Song.set_volume_db(-21)
 		$MotherCall.show()
 	else: 
 		$MotherCall.hide()
 		if volume > -80:
 			$Sounds/Song.set_volume_db(volume -0.75)
-		if Input.is_action_just_pressed("sing"):
-			$Voice.play()
+	if Input.is_action_just_pressed("sing"):
+		$Voice.play()
 	if lever.inside and Input.is_action_just_pressed("interact"):
 		door.open()
 		$Sounds/Door.play()
