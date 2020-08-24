@@ -26,6 +26,7 @@ script = ExtResource( 12 )
 position = Vector2( 40, 72 )
 
 [node name="KeyDoor" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.231373, 0.388235, 0.254902, 1 )
 position = Vector2( 92, 148 )
 
 [node name="LeverDoor" parent="." instance=ExtResource( 1 )]
@@ -33,10 +34,12 @@ modulate = Color( 0.0235294, 0.0509804, 1, 1 )
 position = Vector2( 168, 148 )
 
 [node name="Key" parent="." instance=ExtResource( 10 )]
+modulate = Color( 0.231373, 0.388235, 0.254902, 1 )
 position = Vector2( 44, 72 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
 position = Vector2( 0, 48 )
+scale = Vector2( 0.5, 1 )
 shape = SubResource( 1 )
 
 [node name="ExitDoor" parent="." instance=ExtResource( 9 )]
@@ -44,6 +47,7 @@ position = Vector2( 232, 148 )
 nextScene = "res://MainMenu.tscn"
 
 [node name="Lever" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.0235294, 0.0509804, 1, 1 )
 position = Vector2( 132, 68 )
 
 [node name="DarkBackground" parent="." instance=ExtResource( 6 )]
@@ -178,25 +182,17 @@ rotation = -6.28318
 position = Vector2( 0, 92 )
 rotation = -12.5664
 
+[node name="Floorx42" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 40, 92 )
+rotation = -10.9956
+
 [node name="Floorx26" parent="Walls" instance=ExtResource( 2 )]
 position = Vector2( 48, 92 )
 rotation = -6.28318
 
-[node name="Floor" parent="Walls/Floorx26" instance=ExtResource( 3 )]
-position = Vector2( -7.99985, 16.0001 )
-rotation = 1.57079
-
-[node name="Floor2" parent="Walls/Floorx26" instance=ExtResource( 3 )]
-position = Vector2( -7.99993, 8.00006 )
-rotation = 1.57079
-
 [node name="Floor3" parent="Walls/Floorx26" instance=ExtResource( 3 )]
 position = Vector2( 0.000213623, 24 )
 rotation = 4.71238
-
-[node name="Floor7" parent="Walls/Floorx26" instance=ExtResource( 3 )]
-position = Vector2( -7.99979, 24.0001 )
-rotation = 7.85397
 
 [node name="Floor8" parent="Walls/Floorx26" instance=ExtResource( 3 )]
 position = Vector2( 0.000289917, 32 )
@@ -221,10 +217,6 @@ rotation = 4.71238
 [node name="Floor5" parent="Walls/Floorx26" instance=ExtResource( 3 )]
 position = Vector2( 6.10352e-05, 8 )
 rotation = 4.71238
-
-[node name="Floor6" parent="Walls/Floorx26" instance=ExtResource( 3 )]
-position = Vector2( -8, 6.10352e-05 )
-rotation = 7.85397
 
 [node name="Floorx25" parent="Walls" instance=ExtResource( 2 )]
 position = Vector2( 312, 96 )
@@ -255,7 +247,7 @@ position = Vector2( 164, 96 )
 position = Vector2( 164, 96 )
 
 [node name="Knight" parent="." instance=ExtResource( 8 )]
-position = Vector2( 20, 164 )
+position = Vector2( 24, 164.278 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 84, 132 )

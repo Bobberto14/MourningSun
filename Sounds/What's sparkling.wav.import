@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/What's sparkling.wav-60ddb5d05c1cd39bf0cea51227e08871.sample"
+
+[deps]
+
+source_file="res://Sounds/What's sparkling.wav"
+dest_files=[ "res://.import/What's sparkling.wav-60ddb5d05c1cd39bf0cea51227e08871.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

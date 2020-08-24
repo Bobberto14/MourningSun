@@ -39,6 +39,7 @@ position = Vector2( 16, 100 )
 position = Vector2( 32, 100 )
 
 [node name="Lever" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.0235294, 0.0509804, 1, 1 )
 position = Vector2( 84, 136 )
 
 [node name="ExitDoor" parent="." instance=ExtResource( 11 )]
@@ -218,3 +219,5 @@ position = Vector2( 24, 84 )
 [node name="MotherCall" parent="." instance=ExtResource( 12 )]
 
 [node name="Sounds" parent="." instance=ExtResource( 13 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

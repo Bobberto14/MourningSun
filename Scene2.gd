@@ -21,6 +21,7 @@ var a
 var b
 var dist
 var speed
+var volume
 
 func _ready():
 	screen_size = player.screen_size
@@ -29,6 +30,7 @@ func _ready():
 	$ExitDoor/SceneChanger.fade_in()
 	$Sounds/Ambience.play()
 	$Sounds/Whine.play()
+	$Sounds/Song.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -41,8 +43,19 @@ func _process(delta):
 	if Input.is_action_pressed("sing"):
 		a = (player.get_position() - knight.get_position()).normalized() * knight.speed
 		knight.move_and_slide(a, Vector2(0, 0))
+		if volume < -60:
+			$Sounds/Song.set_volume_db(-60)
+		elif volume < -25:
+			$Sounds/Song.set_volume_db(volume+.5)
+		elif volume >= -25:
+			$Sounds/Song.set_volume_db(-25)
 		$MotherCall.show()
-	else: $MotherCall.hide()
+	else: 
+		$MotherCall.hide()
+		if volume > -80:
+			$Sounds/Song.set_volume_db(volume -0.75)
+		if Input.is_action_just_pressed("sing"):
+			$Voice.play()
 	if lever.inside and Input.is_action_just_pressed("interact"):
 		door.open()
 		$Sounds/Door.play()
